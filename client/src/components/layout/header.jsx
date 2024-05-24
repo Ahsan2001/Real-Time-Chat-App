@@ -4,9 +4,9 @@ import { Menu as MenuIcon, Search as SearchIcon, Add as AddIcon, Group as GroupI
 import { useNavigate } from 'react-router-dom'
 import IconBtn from '../iconBtn/headerBtns'
 
-const SearchDialog = lazy(() => import('../dialog/searchDialog'));
-const NotificationDialog = lazy(() => import('../dialog/notificationDialog'));
-const NewGroupDialog = lazy(() => import('../dialog/newGroupDialog'));
+const SearchDialog = lazy(() => import('../features/search/searchDialog'));
+const NotificationDialog = lazy(() => import('../features/notification/notificationDialog'));
+const NewGroupDialog = lazy(() => import('../features/group/newGroupDialog'));
 
 
 

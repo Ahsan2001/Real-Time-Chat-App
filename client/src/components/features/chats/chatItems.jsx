@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
-import { Link } from '../styles/styledComponents'
+import { Link } from '../../styles/styledComponents'
 import { Box, Stack, Typography } from '@mui/material'
-import AvatarCard from '../shared/avatarCard'
+import AvatarCard from '../../shared/avatarCard'
 
 const ChatItems = ({
     avatar = [],
