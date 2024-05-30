@@ -1,7 +1,7 @@
 import { AppBar,  Backdrop,  Box, IconButton, Toolbar, Typography } from '@mui/material'
 import React, { Suspense, lazy, useState } from 'react'
 import { Menu as MenuIcon, Search as SearchIcon, Add as AddIcon, Group as GroupIcon,Notifications as NotificationsIcon, Logout as LogoutIcon } from "@mui/icons-material"
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import IconBtn from '../iconBtn/headerBtns'
 
 const SearchDialog = lazy(() => import('../features/search/searchDialog'));
@@ -56,7 +56,9 @@ const Header = () => {
       <AppBar position="static" sx={{ bgcolor: 'info.main' }}>
         <Toolbar>
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            Realtime Chat App
+            <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>
+              Realtime Chat App
+            </Link>
           </Typography>
 
           <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
