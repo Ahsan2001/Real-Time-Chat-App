@@ -48,16 +48,16 @@ const Header = () => {
     console.log("handleLogout")
   }
 
-
   return (
 
     <>
     <Box sx={{ flexGrow: 1 }} height={"4rem"}>
-      <AppBar position="static" sx={{ bgcolor: 'info.main' }}>
+      <AppBar position="static" sx={{ bgcolor: 'secondary.dark' }}>
         <Toolbar>
+
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>
-              Realtime Chat App
+            <Link to="/" style={{ color: 'white', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+             <img src="/Messenger.png" alt="" width="40px" />  Messenger 
             </Link>
           </Typography>
 
@@ -67,15 +67,12 @@ const Header = () => {
             </IconButton>
           </Box>
 
-
-
           <Box>
             <IconBtn title="Search" icon={<SearchIcon />} onClick={openSearch} />
             <IconBtn title="New Group" icon={<AddIcon />} onClick={openNewGroup} />
             <IconBtn title="Manage Group" icon={<GroupIcon />} onClick={navifateToGroup} />
             <IconBtn title="Notificatons" icon={<NotificationsIcon />} onClick={openNotification} />
             <IconBtn title="Logout" icon={<LogoutIcon />} onClick={handleLogout} />
-
           </Box>
 
         </Toolbar>
