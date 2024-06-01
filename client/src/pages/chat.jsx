@@ -30,8 +30,8 @@ const Chat = () => {
         sx={{ overflowY: "auto", overflowX: "hidden" }}
       >
         {
-          SampleMessages.map((i)=>(
-            <ChatMessage message={i} user={user} />
+          SampleMessages.map((i, index)=>(
+            <ChatMessage key={index} message={i} user={user} />
           ))
         }
       </Stack>

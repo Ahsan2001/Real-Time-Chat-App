@@ -3,7 +3,7 @@ import React from 'react'
 
 const FileMenu = () => {
   return (
-    <Menu>FileMenu</Menu>
+    <Menu open={false}>FileMenu</Menu>
   )
 }
 
