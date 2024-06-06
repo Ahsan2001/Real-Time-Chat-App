@@ -56,20 +56,20 @@ export const SampleNotifications = [
 
 export const SampleMessages = [
     {
-        attachments: [ 
-            {
-                public_id: "asdfghh",
-                url: "https://www.w3schools.com/howto/img_avatar2.png"
-            }
-        ],
-        content : "Hello mister how are you",
+        // attachments: [ 
+        //     {
+        //         public_id: "asdfghh",
+        //         url: "https://www.w3schools.com/howto/img_avatar2.png"
+        //     }
+        // ],
+        content : "picture bhj bhai",
         _id: "112512516qwdq51qfawf",
         sender : {
             name: "Ahsan",
             _id: "user._id"
         },
         chat: "chatid1",
-        createdAt: "2022-03-28T10:43:00.000Z",
+        createdAt: "2024-06-06T10:13:00.000Z",
 
     },
     {
@@ -79,14 +79,31 @@ export const SampleMessages = [
                 url: "https://www.w3schools.com/howto/img_avatar2.png"
             }
         ],
-        content : "Fine hoo YAAAAAA",
+        // content : "Fine hoo YAAAAAA",
         _id: "112512516qwdq51qfawf",
         sender : {
             name: "Zeesahn",
             _id: "akjsdkhayufg"
         },
         chat: "chatid1",
-        createdAt: "2022-03-28T10:43:00.000Z",
+        createdAt: "2024-06-06T10:00:00.000Z",
+
+    },
+    {
+        // attachments: [ 
+        //     {
+        //         public_id: "asdfghh",
+        //         url: "https://www.w3schools.com/howto/img_avatar2.png"
+        //     }
+        // ],
+        content : "ja esh kar",
+        _id: "112512516qwdq51qfawf",
+        sender : {
+            name: "Zeesahn",
+            _id: "akjsdkhayufg"
+        },
+        chat: "chatid1",
+        createdAt: "2024-06-06T10:00:00.000Z",
 
     }
 ]  

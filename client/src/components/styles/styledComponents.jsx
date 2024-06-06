@@ -17,7 +17,6 @@ export const VisuallyHiddenInput = styled('input')({
 export const Link = styled(LinkComponent)({
     color: 'black',
     textDecoration: 'none',
-    backgroundColor: '#fff',
     '&:hover': {
         backgroundColor: '#f5f5f5',
     }
