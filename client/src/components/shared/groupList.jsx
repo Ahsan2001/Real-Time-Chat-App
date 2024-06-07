@@ -4,7 +4,7 @@ import GroupItem from './groupItem'
 
 const GroupList = ({w="100%", myGroups=[], chatId,mobile}) => {
   return (
-    <Stack width={w}>
+    <Stack width={w} height={"100vh"} overflow={"auto"}>
         {myGroups.length > 0 ? 
         myGroups.map((group) => (
             <GroupItem  key={group._id} group={group} mobile={mobile} chatId={chatId} />

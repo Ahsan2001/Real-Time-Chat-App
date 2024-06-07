@@ -4,9 +4,13 @@ import { KeyboardBackspace as KeyboardBackspaceIcon, Menu as MenuIcon, Edit as E
 import IconBtn from '../components/iconBtn/headerBtns';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import GroupList from '../components/shared/groupList';
-import { SampleChat } from '../data';
+import { SampleChat, SampleUser } from '../data';
+import UserItem from '../components/shared/userItem';
 
-const ConfirmDelete = lazy ( ()=> import('../components/shared/confirmDelete')  ) ;
+const ConfirmDelete = lazy(() => import('../components/shared/confirmDelete'));
+const AddMemberDialog = lazy(() => import('../components/shared/addMember'));
+
+
 
 const Group = () => {
 
@@ -21,7 +25,7 @@ const Group = () => {
 
 
   const [confirmDeleteDialog, setConfirmDeleteDialog] = useState(false);
-
+  const isAddMember = false;
 
   const chatId = useSearchParams()[0].get("group");
 
@@ -59,6 +63,11 @@ const Group = () => {
   const handleAddMember = () => {
     console.log("running handleAddMember")
   }
+
+  const handleRemoveMember = (id) => {
+    console.log("running handleRemoveMember",id)
+  }
+
 
   const handleDeleteGroup = () => {
     setConfirmDeleteDialog(true)
@@ -138,12 +147,13 @@ const Group = () => {
 
 
 
+
+
                     <Typography variant='h6' padding={"1rem"} textAlign={"start"}>Members </Typography>
 
-
-                    <Stack sx={{ background: "linear-gradient(135deg, #310940 0%, #F05e57 100%);" }}
+                    <Stack
                       width={"100%"}
-                      maxWidth={"60%"}
+                      maxWidth={{ xs: "100%", sm: "60%", md: "60%"}}
                       boxSizing={"border-box"}
                       padding={{
                         sm: "1rem",
@@ -153,8 +163,21 @@ const Group = () => {
                       height={"50vh"}
                       overflow={"auto"}
                     >
-
-
+                      {SampleUser.map((i) => (
+                        <UserItem 
+                          user={i} 
+                          key={i._id} 
+                          isAdded 
+                          handler={handleRemoveMember} 
+                          styling={
+                            {
+                              padding: "0.5rem",
+                              borderRadius: "0.5rem",
+                              boxShadow: "0 0 0.7rem 0.1rem rgba(0, 0, 0, 0.2)",
+                            }
+                          }
+                        />
+                      ))}
 
 
                     </Stack>
@@ -170,6 +193,7 @@ const Group = () => {
                         sm: "1rem",
                         md: "1rem 3rem"
                       }}
+                      mt={"2rem"}
                     >
                       <Button variant='contained' startIcon={<AddIcon />} onClick={handleAddMember}>Add Member</Button>
                       <Button variant='outlined' color='error' startIcon={<DeleteIcon />} onClick={handleDeleteGroup}>Delete Group</Button>
@@ -197,16 +221,20 @@ const Group = () => {
 
 
 
-            {/* Delete dialog start */}
- 
+          {/* Delete dialog start */}
+          {confirmDeleteDialog && (<Suspense fallback={<Backdrop open />}>
+            <ConfirmDelete open={confirmDeleteDialog} handleClose={closeConfirmDeleteDialog} deleteHandler={deleteHandler} />
+          </Suspense>)}
+          {/* Delete dialog close */}
 
-            { confirmDeleteDialog &&
-              (
-                <Suspense fallback={<Backdrop open />}>
-                  <ConfirmDelete open={confirmDeleteDialog} handleClose={closeConfirmDeleteDialog} deleteHandler={deleteHandler} />
-                </Suspense>
-              )
-            }
+
+          {/* Add Member dialog start */}
+          {isAddMember && (<Suspense fallback={<Backdrop open />}>
+            <AddMemberDialog />
+          </Suspense>)}
+          {/* Add Member close */}
+
+
 
         </Grid>
       </Grid>

@@ -16,7 +16,7 @@ const ChatList = ({
 
 
     return (
-        <Stack width={w}>
+        <Stack width={w} height={"100%"} overflow={"auto"}>
             {chats.map((data, index) => {
                 const { _id, name, avatar, groupChat, members } = data
 
