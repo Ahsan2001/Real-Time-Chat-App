@@ -14,7 +14,7 @@ const ChatMessage = ({ message , user}) => {
 
 
 
-  console.log(attachments)
+  // console.log(attachments)
 
   return (
     <div style={{

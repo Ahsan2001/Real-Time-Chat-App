@@ -6,6 +6,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import GroupList from '../components/shared/groupList';
 import { SampleChat, SampleUser } from '../data';
 import UserItem from '../components/shared/userItem';
+import Header from '../components/layout/header';
 
 const ConfirmDelete = lazy(() => import('../components/shared/confirmDelete'));
 const AddMemberDialog = lazy(() => import('../components/shared/addMember'));
@@ -88,8 +89,8 @@ const Group = () => {
 
 
   return (
-    <>
-      <Grid container height={"100vh"}>
+    <>  <Header />
+                <Grid container height={"calc(100vh - 4rem)"}>
 
 
         {/* Group listing left side start */}
