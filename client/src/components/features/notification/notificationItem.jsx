@@ -2,6 +2,7 @@ import { Avatar, Button, ListItem, Stack, Typography } from '@mui/material'
 import React, { memo } from 'react'
 
 const NotificationItem = ({ sender, _id, handler }) => {
+    console.log(sender, _id, handler)
     const { name, avatar } = sender
     return (
         <ListItem>

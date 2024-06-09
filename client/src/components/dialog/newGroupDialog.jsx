@@ -1,7 +1,7 @@
 import { Button, Dialog, DialogTitle, Stack, TextField, Typography } from '@mui/material'
 import React, { useState } from 'react'
-import UserItem from '../../shared/userItem'
-import { SampleUser } from '../../../data'
+import UserItem from '../shared/userItem'
+import { SampleUser } from '../../data'
 
 const NewGroupDialog = () => {
 

@@ -6,7 +6,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import { SampleUser } from '../../data';
-import UserItem from './userItem';
+import UserItem from '../shared/userItem';
 import { Stack, Typography } from '@mui/material';
 import { useState } from 'react';
 

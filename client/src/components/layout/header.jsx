@@ -2,11 +2,11 @@ import { AppBar, Backdrop, Box, Drawer, IconButton, Stack, Toolbar, Typography }
 import React, { Suspense, lazy, useState } from 'react'
 import { Menu as MenuIcon, Search as SearchIcon, Add as AddIcon, Group as GroupIcon, Notifications as NotificationsIcon, Logout as LogoutIcon } from "@mui/icons-material"
 import { Link, useNavigate } from 'react-router-dom'
-import IconBtn from '../iconBtn/headerBtns'
+import IconBtn from '../shared/iconBtn'
 
-const SearchDialog = lazy(() => import('../features/search/searchDialog'));
-const NotificationDialog = lazy(() => import('../features/notification/notificationDialog'));
-const NewGroupDialog = lazy(() => import('../features/group/newGroupDialog'));
+const SearchDialog = lazy(() => import('../dialog/searchDialog'));
+const NotificationDialog = lazy(() => import('../dialog/notificationDialog'));
+const NewGroupDialog = lazy(() => import('../dialog/newGroupDialog'));
 
 
 

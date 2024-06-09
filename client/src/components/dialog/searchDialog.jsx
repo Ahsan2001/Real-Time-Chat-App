@@ -1,7 +1,7 @@
-import UserItem from '../../shared/userItem';
+import UserItem from '../shared/userItem';
 import { Dialog, DialogTitle, InputAdornment, List, Stack, TextField } from '@mui/material'
 import React, { useState } from 'react'
-import { SampleUser } from '../../../data';
+import { SampleUser } from '../../data';
 import { Search as SearchIcon } from '@mui/icons-material';
 
 const SearchDialog = () => {

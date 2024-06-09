@@ -1,15 +1,15 @@
 import React, { Suspense, lazy, useEffect, useState } from 'react'
 import { Backdrop, Button, Drawer, Grid, IconButton, Stack, TextField, Typography } from '@mui/material';
 import { KeyboardBackspace as KeyboardBackspaceIcon, Menu as MenuIcon, Edit as EditIcon, Done as DoneIcon, Add as AddIcon, Delete as DeleteIcon } from '@mui/icons-material';
-import IconBtn from '../components/iconBtn/headerBtns';
+import IconBtn from '../components/shared/iconBtn';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import GroupList from '../components/shared/groupList';
 import { SampleChat, SampleUser } from '../data';
 import UserItem from '../components/shared/userItem';
 import Header from '../components/layout/header';
 
-const ConfirmDelete = lazy(() => import('../components/shared/confirmDelete'));
-const AddMemberDialog = lazy(() => import('../components/shared/addMember'));
+const ConfirmDelete = lazy(() => import('../components/dialog/confirmDelete'));
+const AddMemberDialog = lazy(() => import('../components/dialog/addMember'));
 
 
 
